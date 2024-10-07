@@ -23,6 +23,8 @@ def main():
 
         car_manager.move_car()
 
+        car_manager.handle_next_level()
+
         car_manager.handle_movements()
 
         screen.update()

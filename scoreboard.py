@@ -22,6 +22,3 @@ class Scoreboard:
         self.scoreboard.clear()
         self.scoreboard.goto(0, 0)
         self.scoreboard.write("GAME OVER", align="center", font=FONT)
-
-
-
