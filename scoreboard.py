@@ -1,3 +1,4 @@
+""" Class: Score Board """
 from turtle import Turtle
 
 FONT = ("Courier", 24, "normal")

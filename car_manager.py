@@ -1,3 +1,4 @@
+""" Class: CarManager """
 import random
 from turtle import Turtle
 
