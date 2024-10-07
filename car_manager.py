@@ -9,6 +9,7 @@ MOVE_INCREMENT = 10
 class CarManager:
     def __init__(self, player, scoreboard):
         self.all_cars = []
+        self.speed = 1
         self.player = player
         self.scoreboard = scoreboard
         self.game_over = False
@@ -37,5 +38,8 @@ class CarManager:
 
     def handle_next_level(self):
         if self.player.ycor() >= 270:
+            for car in self.all_cars:
+                self.speed += 1
+                car.speed(self.speed)
             self.scoreboard.update_score()
             self.player.level_up()
