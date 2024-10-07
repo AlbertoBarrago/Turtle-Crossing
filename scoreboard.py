@@ -15,5 +15,8 @@ class Scoreboard:
         self.scoreboard.write(f"Your Score: {self.score}", font=FONT)
 
     def update_score(self):
+        self.scoreboard.clear()
         self.score += 1
+        self.scoreboard.write(f"Your Score: {self.score}", font=FONT)
+
 

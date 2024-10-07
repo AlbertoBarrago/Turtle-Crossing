@@ -32,3 +32,6 @@ class Player(Turtle):
        self.screen.onkey(key='Up', fun=self.move)
        self.screen.listen()
 
+   def level_up(self):
+       self.goto(STARTING_POSITION)
+

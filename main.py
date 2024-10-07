@@ -23,6 +23,10 @@ def main():
 
         car_manager.move_car()
 
+        if player.ycor() >= 270:
+            scoreboard.update_score()
+            player.level_up()
+
         screen.update()
 
 if __name__ == '__main__':
