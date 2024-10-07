@@ -10,8 +10,8 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 
 player = Player('turtle')
-car_manager = CarManager()
 scoreboard = Scoreboard()
+car_manager = CarManager(player, scoreboard)
 
 game_is_on = True
 
@@ -23,9 +23,7 @@ def main():
 
         car_manager.move_car()
 
-        if player.ycor() >= 270:
-            scoreboard.update_score()
-            player.level_up()
+        car_manager.handle_movements()
 
         screen.update()
 
