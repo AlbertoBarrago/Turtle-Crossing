@@ -5,9 +5,9 @@ from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
-screen = Screen()
-screen.setup(width=600, height=600)
-screen.tracer(0)
+SCREEN = Screen()
+SCREEN.setup(width=600, height=600)
+SCREEN.tracer(0)
 
 player = Player('turtle')
 scoreboard = Scoreboard()
@@ -21,13 +21,14 @@ def main():
         if random.randint(1, 6) == 1:
             car_manager.generate_new_car()
 
+        # Start the magic
         car_manager.move_car()
-
         car_manager.handle_next_level()
-
         car_manager.handle_movements()
 
-        screen.update()
+        SCREEN.update()
+
+    SCREEN.exitonclick()
 
 if __name__ == '__main__':
     main()

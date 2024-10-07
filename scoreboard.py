@@ -14,11 +14,19 @@ class Scoreboard:
         self.scoreboard.write(f"Your Score: {self.score}", font=FONT)
 
     def update_score(self):
+        """
+        Update Score
+        :return:
+        """
         self.scoreboard.clear()
         self.score += 1
         self.scoreboard.write(f"Your Score: {self.score}", font=FONT)
 
     def game_over(self):
+        """
+        Game over
+        :return:
+        """
         self.scoreboard.clear()
         self.scoreboard.goto(0, 0)
         self.scoreboard.write("GAME OVER", align="center", font=FONT)
